@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39.56" height="39.6" viewBox="0 0 39.56 39.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Обводка" class="cls-1" d="M1129.43,2153.07a19.785,19.785,0,1,1-19.79,19.79A19.788,19.788,0,0,1,1129.43,2153.07Zm0,4.1a15.69,15.69,0,1,1-15.69,15.69A15.69,15.69,0,0,1,1129.43,2157.17Z" transform="translate(-1109.66 -2153.06)"/>
+</svg>

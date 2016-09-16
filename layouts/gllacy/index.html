@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Глейси</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=latin,cyrillic-ext">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <input type="radio" id="slide-1" name="toggle" checked>
+  <input type="radio" id="slide-2" name="toggle">
+  <input type="radio" id="slide-3" name="toggle">
+  <div class="overlay">
+    <div class="header-feedback">
+      <h2>Мы обязательно вам ответим!</h2>
+      <form action="#" method="post" name="feedback-form">
+        <div class="for-label">
+          <input class="field-name field-input" type="text" name="feedback-name" id="id-feedback-name" placeholder="Как вас зовут?">
+          <label for="id-feedback-name">Как вас зовут?</label>
+        </div>
+        <div class="for-label">
+          <input class="field-email field-input" type="email" name="feedback-email" id="id-feedback-email" placeholder="Ваша почта для ответа?">
+          <label for="id-feedback-email">Ваша почта для ответа?</label>
+        </div>
+        <div class="for-label">
+          <textarea class="field-input" id="id-feedback-textarea" placeholder="Напишите что-нибудь..."></textarea>
+          <label for="id-feedback-textarea">Напишите что-нибудь...</label>
+        </div>
+        <button class="feedback-btn button-a" type="submit" name="feedback-submit">Отправить</button>
+      </form>
+      <button type="button" class="header-feedback-close">Закрыть</button>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="container">
+      <header class="clearfix">
+        <img class="logo" src="img/logo.svg" width="153" height="63" alt="Глейси">
+        <ul class="main-navigation">
+          <li class="current">
+            <a href="#">Каталог</a>
+            <ul class="sub-menu">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="catalog.html">Сливочное</a></li>
+              <li class="current"><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li>
+            <a href="#">О Компании</a>
+          </li>
+        </ul>
+        <div class="basket-block">
+          <!-- <a class="basket empty" href="#">Пусто</a> -->
+          <a class="basket full" href="#">2 товара</a>
+          <div class="basket-hover">
+            <div class="basket-items">
+              <div class="basket-item">
+                <div class="cross cell"><a href="#"></a></div>
+                <div class="image cell"><img src="img/ice-1.jpg" width="33" height="33" alt=""></div>
+                <div class="description cell">Пломбир с апельсиновым джемом</div>
+                <div class="price cell">1,5 кг <span>х 200 руб</span></div>
+                <div class="total cell">300 руб</div>
+              </div>
+              <div class="basket-item">
+                <div class="cross cell"><a href="#"></a></div>
+                <div class="image cell"><img src="img/ice-3.jpg" width="33" height="33" alt=""></div>
+                <div class="description cell">Клубничный пломбир с присыпкой из белого шоколада</div>
+                <div class="price cell">1,5 кг <span>х 300 руб</span></div>
+                <div class="total cell">450 руб</div>
+              </div>
+            </div>
+            <div class="total">Итого: 750 руб.</div>
+            <a class="basket-btn button-a" href="#">Оформить заказ</a>
+          </div>
+        </div>
+        <div class="login-block">
+          <a class="login" href="#">Вход</a>
+          <form action="#" method="post" name="form-login">
+            <div class="for-label">
+              <input class="field-input-menu" type="email" name="login-email" id="id-login-email" placeholder="Электронная почта">
+              <label for="id-login-email">Электронная почта</label>
+            </div>
+            <div class="for-label">
+              <input class="field-input-menu class-login-password" type="password" name="login-password" id="id-login-password" placeholder="Пароль">
+              <label for="id-login-password">Пароль</label>
+            </div>
+            <button class="button-a" type="submit" name="login-submit">Войти</button>
+            <a class="black-a" href="#">Забыли пароль</a>
+            <a class="black-a" href="#">Новая регистрация</a>
+          </form>
+        </div>
+        <div class="search-block">
+          <a class="search" href="#">Поиск</a>
+          <form action="#" method="post">
+            <div class="for-label">
+              <input class="field-input-menu" type="text" name="search" id="id-search" placeholder="Что ищем?">
+              <label for="id-search">Что ищем?</label>
+            </div>
+          </form>
+        </div>
+        <div class="header-phones">
+          С 10 до 20, ежедневно<br>
+          <span>8 812 450-25-25</span>
+        </div>
+      </header>
+      <main>
+        <div class="slider">
+          <div class="controls">
+            <label for="slide-1"></label>
+            <label for="slide-2"></label>
+            <label for="slide-3"></label>
+          </div>
+          <div class="slides">
+            <!-- долго ломал голову: как сделать правильный перенос строк, были варианты: 1) испольвать br 2) ограничивать ширину h1 - посчитал не практично 3) используем в HTML неразрыврый пробел - как по мне гениально! -->
+            <div class="slide">
+              <h1>Крем-брюле и пломбир с&nbsp;малиновым&nbsp;джемом</h1>
+              <a class="button-a" href="#slide-1">Давайте оба!</a>
+            </div>
+            <div class="slide">
+              <h1>Шоколадный пломбир и&nbsp;лимонный&nbsp;сорбет</h1>
+              <a class="button-a" href="#slide-2">Давайте оба!</a>
+            </div>
+            <div class="slide">
+              <h1>Пломбир с помадкой и&nbsp;клубничный&nbsp;щербет</h1>
+              <a class="button-a" href="#slide-3">Давайте оба!</a>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix">
+          <div class="banner left">
+            <h2>Малинка даром!</h2>
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a href="#" class="banner-btn-left button-a">Хочу варенье!</a>
+          </div>
+          <div class="banner right">
+            <h2>Шоколадки даром!</h2>
+            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки  абсолютно бесплатно.</p>
+            <a href="#" class="banner-btn-right button-a">Хочу шоколадки!</a>
+          </div>
+        </div>
+        <div class="items">
+          <section class="item">
+            <div class="item-photo hit">
+              <img src="img/ice-1.jpg" width="200" height="200" alt="">
+              <div class="item-price">310<span> </span>&#8381;<span>/кг</span></div>
+            </div>
+            <a class="description white-a" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="item-btn button-a" href="#">Быстрый просмотр</a>
+          </section>
+
+          <section class="item">
+            <div class="item-photo hit">
+              <img src="img/ice-2.jpg" width="200" height="200" alt="">
+              <div class="item-price">380<span> </span>&#8381;<span>/кг</span></div>
+            </div>
+            <a class="description white-a" href="#">Сливочно-кофейное с кусочками шоколада</a>
+            <a class="item-btn button-a" href="#">Быстрый просмотр</a>
+          </section>
+
+          <section class="item">
+            <div class="item-photo hit">
+              <img src="img/ice-3.jpg" width="200" height="200" alt="">
+              <div class="item-price">355<span> </span>&#8381;<span>/кг</span></div>
+            </div>
+            <a class="description white-a" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a class="item-btn button-a" href="#">Быстрый просмотр</a>
+          </section>
+
+          <section class="item">
+            <div class="item-photo hit">
+              <img src="img/ice-4.jpg" width="200" height="200" alt="">
+              <div class="item-price">415<span> </span>&#8381;<span>/кг</span></div>
+            </div>
+            <a class="description white-a" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+            <a class="item-btn button-a" href="#">Быстрый просмотр</a>
+          </section>
+        </div>
+        <div class="advertising">
+          <!-- в макете 2 (два) пробела, решил тут тоже должно быть так, чтобы при проверке PixelPerfect было совпадение -->
+          <h2>Магазин Глейси &nbsp;— это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
+          <p class="icon-ice">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+          <p class="icon-cow">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          <p class="icon-leaves">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты произведены из натурального, экологически чистого сырья.</p>
+          <p class="icon-thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, которая не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+        </div>
+        <div class="clearfix">
+          <div class="news">
+            <p>Новое в нашем блоге</p>
+            <!-- я использовал br осмысленно, ограничивать шиирну в css для формирования переносов не хочу. Вдруг завтра нужно будет убрать перенос строк? -->
+            <!-- в макете 2 (два) пробела, решил тут тоже должно быть так, чтобы при проверке PixelPerfect было совпадение -->
+            <a href="#"><span>10 &nbsp;способов сервировки<br>фруктовых щербетов<br>к столу</span></a>
+          </div>
+          <div class="delivery">
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+            <form action="#" method="post">
+              <div class="for-label">
+              <input class="field-input" type="email" name="delivery-email" id="id-delivery-email" placeholder="Электронная почта" required>
+                <label for="id-delivery-email">Электронная почта</label>
+              </div>
+              <button class="button-a" type="submit" name="delivery-submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div> <!-- container -->     
+    <div class="map">
+      <div class="map-google">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123993!2d30.320894616108887!3d59.9387968690479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1455128324019" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div class="container">
+        <div class="map-feedback">
+          <p>Адрес главного офиса и офлайн&nbsp;магазина:<br>
+            <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+          </p>
+          <p>Для заказов по телефону:<br>
+            <span>8 812 450-25-25</span><br>
+            (с 10 до 20 ежедневно)
+          </p>
+          <!-- да, я считаю что это ссылка - если javascript не работает, то ведет не отдельную страницу с формой-->
+          <a class="button-a button-feedback" href="#">Форма обратной связи</a>
+        </div>
+      </div>
+    </div> <!-- map -->
+    <div class="container">
+      <footer class="clearfix">
+        <section class="social">
+          <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+        </section>
+        <ul class="navigation">
+          <li><a class="white-a" href="#">Для поставщиков</a></li>
+          <li><a class="white-a" href="#">Наши документы</a></li>
+          <li><a class="white-a" href="#">О производстве</a></li>
+          <li><a class="white-a" href="#">Экологические стандарты</a></li>
+        </ul>
+        <section class="copyright">
+          <a class="copyright-a white-a" href="https://htmlacademy.ru">Сделано в <span>HTML Academy</span> © 2016</a>
+        </section>
+      </footer>
+    </div> <!-- container -->
+  </div> <!-- wrapper -->
+  <script src="js/script.min.js"></script>
+</body>
+</html>
