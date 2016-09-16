@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru-RU" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Reserved - заказ и доставка еды из ресторанов</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrapper-big">
+      <div class="wrapper-mini clearfix">
+        <a class="header-logo" href="#" title="На главную">
+          <img src="img/logo-reserved-header.png" width="252" height="77" alt="Reserved">
+          <div class="header-logo-text">Заказ и доставка еды из ресторанов</div>
+        </a>
+        <a class="header-basket" href="#" title="Перейти в корзину">
+          <div class="header-basket-title">Корзина</div>
+          <div class="header-basket-info">
+            Заказанных блюд: <span>2</span>
+            <br>Стоимость: <span>216 грн</span>
+          </div>
+        </a>
+        <div class="header-panel">
+          <form action="#" name="form-search">
+            <input type="text" name="field-search" placeholder="Поиск">
+            <button type="submit" name="search" title="Поиск"></button>
+          </form>
+          <a class="header-login-a" href="#">Вход</a>
+          <a class="header-register-a" href="#">Регистрация</a>
+        </div>
+        <div class="header-info">
+          <a class="header-tel" href="tel:+380501234567">050 123-45-67</a>
+          <a class="header-button-feedback" href="#">Заказать звонок</a>
+          <div class="header-schedule">Работаем каждый день
+            <br>с 10:00 до 21:30</div>
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li class="active">Главная</li>
+            <li><a href="#">Как заказать</a></li>
+            <li><a href="#">Бонусы</a></li>
+            <li><a href="#">Каталог товаров</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Статьи</a></li>
+          </ul>
+        </nav>
+      </div> <!-- .wrapper-mini -->
+    </div> <!-- .wrapper-big -->
+    <div class="wrapper-big wrapper-header-form-choise">
+      <div class="wrapper-mini">
+        <form class="clearfix" name="form-choise" action="#">
+          <label for="id-field-city">Город</label>
+          <select name="field-city" id="id-field-city">
+            <option>Выбрать</option>
+            <option value="kherson">Херсон</option>
+            <option value="kiev">Киев</option>
+            <option value="nikolaev">Николаев</option>
+          </select>
+          <label for="id-field-category">Категория</label>
+          <select name="field-category" id="id-field-category">
+            <option>Все</option>
+            <option value="cafe">Кафе</option>
+            <option value="pub">Паб</option>
+            <option value="bar">Бар</option>
+          </select>
+          <!-- ниже поменял местами, т.к. float: right стоит -->
+          <select name="field-shop" id="id-field-shop">
+            <option>Все</option>
+            <option value="celentano">Челентано</option>
+            <option value="forsash">Форсаж</option>
+            <option value="lavanda">Лаванда</option>
+          </select>
+          <label for="id-field-shop">Заведение</label>
+        </form>
+      </div> <!-- .wrapper-mini -->
+    </div> <!-- .wrapper-big -->
+  </header>
+  <main>
+    <div class="wrapper-big wrapper-main">
+      <div class="wrapper-mini clearfix">
+        <div class="carousel clearfix">
+          <button class="carousel-button-left" title="Назад"></button>
+          <button class="carousel-button-right" title="Вперед"></button>
+          <div class="carousel-wrapper">
+            <div class="carousel-items">
+              <a class="carousel-link" href="#img1">
+                <div class="align"><img src="img/carouse-img1.png" alt="Суши"></div>
+                <span>Суши</span>
+              </a>
+              <a class="carousel-link" href="#img2">
+                <div class="align"><img src="img/carouse-img2.png" alt="Пицца"></div>
+                <span>Пицца</span>
+              </a>
+              <a class="carousel-link" href="#img3">
+                <div class="align"><img src="img/carouse-img3.png" alt="Горячие блюда"></div>
+                <span>Горячие блюда</span>
+              </a>
+              <a class="carousel-link" href="#img4">
+                <div class="align"><img src="img/carouse-img4.png" alt="Мангал"></div>
+                <span>Мангал</span>
+              </a>
+              <a class="carousel-link" href="#img5">
+                <div class="align"><img src="img/carouse-img5.png" alt="Супы"></div>
+                <span>Супы</span>
+              </a>
+              <a class="carousel-link" href="#img6">
+                <div class="align"><img src="img/carouse-img6.png" alt="Салаты"></div>
+                <span>Салаты</span>
+              </a>
+              <a class="carousel-link" href="#img7">
+                <div class="align"><img src="img/carouse-img7.png" alt="Гарниры"></div>
+                <span>Гарниры</span>
+              </a>
+            </div> <!-- .carousel-items -->
+          </div> <!-- .carousel-wrapper -->
+        </div> <!-- .carousel -->
+        <div class="advertising clearfix">
+          <div class="slider">
+            <button class="slider-left" title="Назад"></button>
+            <button class="slider-right" title="Вперед"></button>
+            <div class="slides">
+              <a class="slide" href="#s1">
+                <img src="img/slide1.jpg" alt="">
+              </a>
+              <a class="slide" href="#s2">
+                <img src="img/slide2.jpg" alt="">
+              </a>
+              <a class="slide" href="#s3">
+                <img src="img/slide3.jpg" alt="">
+              </a>
+              <a class="slide" href="#s4">
+                <img src="img/slide4.jpg" alt="">
+              </a>
+            </div>
+          </div> <!-- .slider -->
+          <div class="banner">
+            <a class="banner-right-top" href="#">
+              <img src="img/banner1.jpg" alt="">
+            </a>
+            <a class="banner-right-bottom" href="#">
+              <img src="img/banner2.jpg" alt="">
+            </a>
+          </div> <!-- .banner -->
+        </div> <!-- .advertising -->
+        <div class="news">
+          <div class="news-caption">Новости</div>
+          <ul>
+            <li>
+              <time datetime="2015-08-18"><span>18</span> августа</time>
+              <a href="#">
+                <h3 class="news-title">Пицца Четыре сезона в подарок!</h3>
+                <p class="news-text">При заказе на сумму от 600 грн пицца Четыре сезона 33см. в подарок!</p>
+              </a>
+            </li>
+            <li>
+              <time datetime="2015-08-12"><span>12</span> августа</time>
+              <a href="#">
+                <h3 class="news-title">Корзинка черешни в подарок!</h3>
+                <p class="news-text">При любом заказе корзинка черешни в подарок!</p>
+              </a>
+            </li>
+            <li>
+              <time datetime="2015-08-04"><span>04</span> августа</time>
+              <a href="#">
+                <h3 class="news-title">Ролл Фудзияма в подарок!</h3>
+                <p class="news-text">При заказе на сумму от 800 грн ролл Фудзияма в подарок!</p>
+              </a>
+            </li>
+            <li>
+              <time datetime="2015-07-31"><span>31</span> июля</time>
+              <a href="#">
+                <h3 class="news-title">Пирог с капустой в подарок!</h3>
+                <p class="news-text">При заказе на сумму от 1500 грн пирог с капустой в подарок!</p>
+              </a>
+            </li>
+            <li>
+              <time datetime="2015-07-30"><span>30</span> июля</time>
+              <a href="#">
+                <h3 class="news-title">Пицца Четыре сезона в подарок!</h3>
+                <p class="news-text">При любом заказе корзинка черешни в подарок!</p>
+              </a>
+            </li>
+          </ul>
+        </div> <!-- .news -->
+        <div class="articles">
+          <div class="articles-caption">Статьи</div>
+          <ul>
+            <li>
+              <img src="img/articles1.jpg" alt="">
+              <h3 class="articles-title">Салат «Римская охота»</h3>
+              <p class="articles-text">Салат по итальянскому рецепту с ростбифом, салатом «Романо» и грибами пикантность салату придаёт сочетание фисташкового</p>
+              <a class="articles-button" href="#">Подробнее</a>
+            </li>
+            <li>
+              <img src="img/articles2.jpg" alt="">
+              <h3 class="articles-title">Салат «Римская охота»</h3>
+              <p class="articles-text">Салат по итальянскому рецепту с ростбифом, салатом «Романо» и грибами пикантность салату придаёт сочетание фисташкового</p>
+              <a class="articles-button" href="#">Подробнее</a>
+            </li>
+            <li>
+              <img src="img/articles3.jpg" alt="">
+              <h3 class="articles-title">Салат «Римская охота»</h3>
+              <p class="articles-text">Салат по итальянскому рецепту с ростбифом, салатом «Романо» и грибами пикантность салату придаёт сочетание фисташкового</p>
+              <a class="articles-button" href="#">Подробнее</a>
+            </li>
+          </ul>
+        </div> <!-- .articles -->
+      </div> <!-- .wrapper-mini -->
+    </div> <!-- .wrapper-big -->
+    <div class="wrapper-big wrapper-social">
+      <div class="wrapper-mini">
+        <div class="social clearfix">
+          <div class="social-title">Мы в соцсетях</div>
+          <div class="social-plugin-fb">
+            <img src="img/plugin-facebook.jpg" width="315" alt="">
+          </div>
+          <div class="social-plugin-vk">
+            <img src="img/plugin-vkontakte.jpg" width="312" alt="">
+          </div>
+          <div class="social-plugin-ok">
+            <img src="img/plugin-odnoklassniki.jpg" width="282" alt="">
+          </div>
+        </div> <!-- .social -->
+        <div class="content-bottom">
+          <h2 class="content-bottom-title">Заказ и доставка еды из ресторанов - Reserved</h2>
+          <p class="content-bottom-text">Современный ритм жизни не оставляет нам времени на то, чтобы самостоятельно готовить завтрак, обед и ужин. К счастью, сегодня, интернет-сервис reserved предлагает услугу под названием «Доставка еды на дом и в офис»!</p>
+          <p class="content-bottom-text">Еда на дом – это прекрасный вариант для тех, кто ценит свое время и силы, предпочитая провести вечер с семьей вместо монотонного приготовления ужина. Доставка еды на дом от кафе «Му-му» порадует всех членов семьи – от самых маленьких до самых изысканных во вкусах. Доставка еды в офис - необходимая услуга для большинства компаний на сегодняшний день. Но, к сожалению, не многие кафе могут похвастаться разнообразным меню и доставка домашней еды становится трудной задачей для большинства москвичей. Вы найдете не только первые или основные блюда, но и салаты, десерты и, конечно же, напитки и соусы. Обеды в офис и на дом доставляются бесплатно. Заказ обедов в офис может стать прекрасным поощрением сотрудников компании и даже начальным этапом «тимбилдинга», ведь именно в обеденный перерыв сотрудники максимально расслаблены.</p>
+          <p class="content-bottom-text">Многие из нас не заказывают обеды в офис или еду на дом, поскольку опасаются томительного ожидания блюд. Наша служба доставки привезет Вам обед на дом или на работу в течение часа или полутора после звонка, поэтому смело можете рассчитывать на своевременную трапезу.</p>
+          <p class="content-bottom-text">Все наши блюда приготовлены из свежих натуральных ингредиентов в день заказа, таким образом Вы можете быть уверены, что еда на дом приедет к Вам свежей и вкусной! А благодаря уникальной технологии «Тermobox», которая сохраняет еду горячей, Вам даже не придется разогревать блюдо. Что касается экономической стороны вопроса, доставка еды порадует Вас демократичными ценами, так что Вы сможете не ограничивать свой выбор.</p>
+          <p class="content-bottom-text">На данной странице Вы можете увидеть самые популярные блюда нашего кафе, а какую заказать еду - на дом или в офис, решайте сами! В любом случае, высокое качество блюд и индивидуальный подход к каждому - гарантирован!</p>
+        </div> <!-- .content-bottom -->
+      </div> <!-- .wrapper-mini -->
+    </div> <!-- .wrapper-big -->
+  </main>
+  <footer>
+    <div class="wrapper-big wrapper-footer">
+      <div class="wrapper-mini clearfix">
+        <div class="footer-logo">
+          © 2013 Reserved
+          <br>Все права защищены
+        </div>
+        <ul class="footer-navigation">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Пресса о нас</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Бонусы</a></li>
+          <li><a href="#">Партнеры</a></li>
+          <li><a href="#">Корпоративным клиентам</a></li>
+          <li><a href="#">Сотрудничество</a></li>
+          <li><a href="#">Каталог товаров</a></li>
+          <li><a href="#">Как заказать</a></li>
+          <li><a href="#">Соглашение</a></li>
+          <li><a href="#">Отзывы</a></li>
+        </ul>
+        <div class="footer-right">
+          <div class="footer-social">
+            <div class="footer-social-title">Мы в соцсетях</div>
+            <a class="footer-social-fb" target="_blank" title="Facebook" href="#fb">Facebook</a>
+            <a class="footer-social-tw" target="_blank" title="Twitter" href="#tw">Twitter</a>
+            <a class="footer-social-ok" target="_blank" title="Однокласники" href="#ok">Однокласники</a>
+            <a class="footer-social-vk" target="_blank" title="Вконтакте" href="#vk">Вконтакте</a>
+          </div>
+          <a class="footer-developer" href="#" title="Перейти на сайт">Разработка сайта – <span>web-студия</span></a>
+        </div>
+      </div> <!-- .wrapper-mini -->
+    </div> <!-- .wrapper-big -->
+  </footer>
+</body>
+
+</html>
