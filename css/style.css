@@ -1,0 +1,25 @@
+html,
+body {
+  max-width: 1920px;
+  min-width: 320px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background: #eeeee4;
+  color: #254e4e;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.header {
+  height: 288px;
+}

@@ -1,0 +1,50 @@
+/* генерировал на сайте everythingfonts.com */
+/* не уверен, что из шрифтов PTSansPro можно и нужно делать один font-face, ведь формально это разные шрифты, особенно PTSansProNarrowExtraBold и PTSansProNarrowBlack. Просто хочется удобства при верстке, но не знаю как по правилам хорошего тона */
+
+/*@font-face {
+  font-family: "PTSansPro";
+  src: url("PTSansProLight.woff2") format("woff2"),
+       url("PTSansProLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: "PTSansPro";
+  src: url("PTSansProRegular.woff2") format("woff2"),
+       url("PTSansProRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSansPro";
+  src: url("PTSansProNarrowExtraBold.woff2") format("woff2"),
+       url("PTSansProNarrowExtraBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*@font-face {
+  font-family: "PTSansPro";
+  src: url("PTSansProNarrowBlack.woff2") format("woff2"),
+       url("PTSansProNarrowBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: "MetaPro";
+  src: url("MetaProNormal.woff2") format("woff2"),
+       url("MetaProNormal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MetaPro";
+  src: url("MetaProMedium.woff2") format("woff2"),
+       url("MetaProMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}

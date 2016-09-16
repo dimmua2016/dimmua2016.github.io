@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru-RU" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Best-cars - транспортные услуги на юге Украины</title>
+  <link rel="stylesheet" href="fonts/fonts.min.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <a class="header-logo" href="#">
+        <h1 class="header-logo-name">Best-cars</h1>
+        <h3 class="header-logo-text">Транспортные услуги на юге Украины</h3>
+      </a>
+      <div class="header-contacts">
+        <a class="header-contacts-tel" href="tel:+380506731000"><span>(050)</span>673-1000</a>
+        <div class="header-contacts-mail">
+          <a href="mailto:info@yescars.com.ua">info@yescars.com.ua</a>
+        </div>
+      </div>
+      <nav class="main-navigation">
+        <ul>
+          <li class="home active"><span>Главная</span></li>
+          <li class="catalog"><a href="#"><span>Каталог автомобилей</span></a></li>
+          <li class="news"><a href="#"><span>Новости</span></a></li>
+          <li class="recall"><a href="#"><span>Отзывы о компании</span></a></li>
+        </ul>
+      </nav>
+      <!-- далее возможные варианты активного меню и иконок в отдельном div блоке -->
+      <!-- <div>
+        <br>
+        <nav class="main-navigation">
+          <ul>
+            <li class="home"><a href="#"><span>Главная</span></a></li>
+            <li class="catalog active"><span>Каталог автомобилей</span></li>
+            <li class="news"><a href="#"><span>Новости</span></a></li>
+            <li class="recall"><a href="#"><span>Отзывы о компании</span></a></li>
+          </ul>
+        </nav>
+        <br>
+        <nav class="main-navigation">
+          <ul>
+            <li class="home"><a href="#"><span>Главная</span></a></li>
+            <li class="catalog"><a href="#"><span>Каталог автомобилей</span></a></li>
+            <li class="news active"><span>Новости</span></li>
+            <li class="recall"><a href="#"><span>Отзывы о компании</span></a></li>
+          </ul>
+        </nav>
+        <br>
+        <nav class="main-navigation">
+          <ul>
+            <li class="home"><a href="#"><span>Главная</span></a></li>
+            <li class="catalog"><a href="#"><span>Каталог автомобилей</span></a></li>
+            <li class="news"><a href="#"><span>Новости</span></a></li>
+            <li class="recall active"><span>Отзывы о компании</span></li>
+          </ul>
+        </nav>
+      </div> -->
+    </header>
+    <main>
+      <div class="slider">
+        <input type="radio" name="slider-radio" id="id-slide1" checked>
+        <input type="radio" name="slider-radio" id="id-slide2">
+        <input type="radio" name="slider-radio" id="id-slide3">
+        <input type="radio" name="slider-radio" id="id-slide4">
+        <div class="slider-controls">
+          <label class="slider-label" for="id-slide1"></label>
+          <label class="slider-label" for="id-slide2"></label>
+          <label class="slider-label" for="id-slide3"></label>
+          <label class="slider-label" for="id-slide4"></label>
+        </div>
+        <div class="slides">
+          <div class="slide">
+            <div class="title">
+              Предоставление автомобилей в аренду для:<br>
+              <span class="title-big">Свадебного кортежа</span>
+            </div>
+            <div class="button"><a href="#s1">Заказ <span>машины</span></a></div>
+          </div>
+          <div class="slide">
+            <div class="title">
+              Предоставление автомобилей в аренду для:<br>
+              <span class="title-big">Фотосессии</span>
+            </div>
+            <div class="button"><a href="#s2">Заказ <span>машины</span></a></div>
+          </div>
+          <div class="slide">
+            <div class="title">
+              Предоставление автомобилей в аренду для:<br>
+              <span class="title-big">Деловых поездок<br>и трансфера</span>
+            </div>
+            <div class="button"><a href="#s3">Заказ <span>машины</span></a></div>
+          </div>
+          <div class="slide">
+            <div class="title">
+              <span class="title-big">Аренда автобусов<br>и микроавтобусов</span>
+            </div>
+            <div class="button"><a href="#s4">Заказ <span>машины</span></a></div>
+          </div>
+        </div> <!-- .slides -->
+      </div> <!-- .slider -->
+      <div class="carousel">    
+        <div class="carousel-top clearfix">
+          <div class="carousel-title">Каталог автомобилей</div>
+          <a class="carousel-move-to a-blue" href="#">Перейти в раздел</a>
+        </div>
+        <button class="carousel-button-left" title="Назад"></button>
+        <button class="carousel-button-right" title="Вперед"></button>
+        <div class="carousel-wrapper"> <!-- видимая область карусели -->
+          <div class="carousel-items"> <!-- весь набор элементов карусели -->
+
+            <div class="carousel-block">
+              <a class="carousel-link a-blue" href="#img1">
+                <img src="img/carousel-ford-kuga.jpg" width="150" height="90" alt="">
+                <span>Ford Kuga</span>
+              </a>
+            </div>
+
+            <div class="carousel-block">
+              <a class="carousel-link a-blue" href="#img2">
+                <img src="img/carousel-lexus-rx.jpg" width="150" height="90" alt="">
+                <span>Lexus RX</span>
+              </a>
+            </div>
+
+            <div class="carousel-block">
+              <a class="carousel-link a-blue" href="#img3">
+                <img src="img/carousel-toyota-avensis.jpg" width="150" height="90" alt="">
+                <span>Toyota Avensis</span>
+              </a>
+            </div>
+
+            <div class="carousel-block">
+              <a class="carousel-link a-blue" href="#img4">
+                <img src="img/carousel-volkswagen-jetta.jpg" width="150" height="90" alt="">
+                <span>Volkswagen Jetta</span>
+              </a>
+            </div>
+
+            <div class="carousel-block">
+              <a class="carousel-link a-blue" href="#img5">
+                <img src="img/carousel-chrisler-300c.jpg" width="150" height="90" alt="">
+                <span>Chrisler 300C</span>
+              </a>
+            </div>
+
+            <div class="carousel-block">
+              <a class="carousel-link a-blue" href="#img6">
+                <img src="img/carousel-avto6.jpg" width="150" height="90" alt="">
+                <span>Запорожец</span>
+              </a>
+            </div>
+
+            <div class="carousel-block">
+              <a class="carousel-link a-blue" href="#img7">
+                <img src="img/carousel-avto7.jpg" width="150" height="90" alt="">
+                <span>Автобус-Еталон</span>
+              </a>
+            </div>
+
+            <div class="carousel-block">
+              <a class="carousel-link a-blue" href="#img8">
+                <img src="img/carousel-avto8.jpg" width="150" height="90" alt="">
+                <span>Карета</span>
+              </a>
+            </div>
+
+          </div> <!-- .carousel-items -->
+        </div> <!-- .carousel-wrapper -->
+      </div> <!-- .carousel -->      
+      <article class="sidebar">
+        <h1 class="sidebar-title">Отзывы клиентов</h1>
+        <ul class="sidebar-list">
+          <li>
+            <time datetime="2013-05-24">24.05.2013</time> <span class="name">Михаил</span><br>
+            На прошлой неделе у меня сломался автомобиль, а мне по работе нужно бывать в разных частях города, то есть без машины никак. Друг посоветовал обратиться в эту фирму. Нормально все получилось, пригнали Соларис к подъезду. Салон чистый, не прокуренный, полный бак. Обошлось все гораздо дешевле, чем заказывать на целый день такси.
+          </li>
+          <li>
+            <time datetime="2013-05-17">17.05.2013</time> <span class="name">Саша</span><br>
+            Решил с семьей съездить отдохнуть на озеро. Взял Каптиву на выходные, нужен был навигатор и автокресло, предоставили. Заодно тестдрайв машины сделал, себе такую же хочу.
+          </li>
+        </ul>
+        <a class="sidebar-list-all a-blue" href="#">Все отзывы</a>
+      </article> <!-- .sidebar -->
+      <div class="content">
+        <h1 class="content-title">Добро пожаловать на сайт компании Best-Cars</h1>
+        <p>Мы предоставляем качественные транспортные услуги на Юге Украины. Вы можете заказать у нас автомобили для самых разных целей – личных и деловых поездок, свадебных кортежей, обслуживания трансферов и любых торжественных мероприятий.</p>
+        <p>За время работы нами накоплен опыт в обслуживании свадеб, трансферов и различных торжеств. Мы тщательно изучали каждую "грань", касающуюся нашей работы с вами, учитывали Ваши пожелания, исполняли "капризы". Мы достигли высокого уровня обслуживания и имеем хорошие отзывы о нашей работе от клиентов.</p>
+        <ul class="content-custom-list">
+          <li>Доскональное знание рынка транспортных услуг позволяет нам учитывать особенности и специфику данного региона, предпочтения и пожелания наших пассажиров.</li>
+          <li>Мы уделяем повышенное внимание содержанию парка наших автомобилей и постоянно следим за внешним видом и техническим состоянием автомобиля. Поэтому любой автомобиль, поданный по вашему заказу, будет достойным и надежным средством вашего передвижения.</li>
+          <li>Водители нашей компании имеют высокую квалификацию и огромный опыт вождения. Они вежливы, тактичны, пунктуальны.</li>
+          <li>При необходимости мы можем предоставить автомобиль с водителем, владеющим английским языком. Это важное преимущество при обслуживании иностранных туристов и делегаций. Сотрудничество с охранными фирмами позволяет нам обеспечить безопасность клиентов на высшем уровне.</li>
+          <li>Вы можете заказать у нас свадебные автомобили для жениха и невесты, машины для свадебного кортежа, а также такую услугу, как украшение авто на свадьбу.</li>
+        </ul>
+        <p class="content-end">Мы будем рады видеть вас в числе наших клиентов!</p>
+      </div> <!-- .content -->
+    </main>
+    <footer>
+      <div class="footer-contacts">
+        <p class="company">© 2013 <strong>Best-cars</strong><br>
+          Транспортные услуги на юге Украины
+        </p>
+        <p>Адрес: Херсон, ул.<br>
+          Телефон: <a class="tel a-white" href="tel:+380506731000">(050) 673-1000</a><br>
+          <a class="mail a-white" href="mailto:info@yescars.com.ua">info@yescars.com.ua</a>
+        </p>
+      </div>
+      <div class="footer-banner">
+        <a href="#"><img class="footer-banner-img" src="http://placehold.it/469x61" width="469" height="61" alt=""></a>
+        <p class="footer-banner-p">Баннерная система - продвижение сайтов</p>
+      </div>
+      <a class="footer-copyright a-white" href="#" target="_blank" title="Перейти на сайт">Разработка сайта —<br><span>web-студия</span>
+      </a>
+    </footer>
+  </div> <!-- .wrapper -->
+  <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+  <script src="js/jquery-latest.js"></script>
+  <script src="js/carousel.js"></script>
+</body>
+</html>

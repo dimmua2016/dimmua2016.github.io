@@ -1,0 +1,1501 @@
+body {
+  min-width: 900px;
+  background-color: #849d8f;
+  color: #ffffff;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.container {
+  width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 657px;
+  background-image: linear-gradient(white,transparent);
+  opacity: 0.2;
+}
+
+/* Стили, задаваемые к нескольким элементам */
+
+.white-a {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.white-a:hover,
+.white-a:active {
+  border-color: rgba(249,172,159,0.3);
+  color: #ffbc9e;
+}
+
+.black-a {
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.black-a:hover,
+.black-a:active {
+  border-color: rgba(236,89,60,0.3);
+  color: #ec593c;
+}
+
+.field-input {
+  padding: 11px 15px;
+  outline: none;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  color: #353535;
+  font-size: 16px;
+}
+
+.field-input:hover,
+.field-input-menu:hover {
+  outline: none;
+  border: 1px solid #c7c6c5;
+  box-shadow: inset 0 0 0 1px #c7c6c5;
+}
+
+.field-input:focus,
+.field-input-menu:focus {
+  outline: none;
+  border: 1px solid #8fbdec;
+  box-shadow: inset 0 0 0 1px #8fbdec;
+}
+
+.button-a {
+  padding: 12px 22px;
+  border-radius: 23px;
+  background-color: #ed6040; /* для подстраховки */
+  background-image: linear-gradient(to top, #ca3824, #f26843);
+  box-shadow: 0 2px 2px rgba(85,8,0,0.54);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button-a:hover {
+  background-image: linear-gradient(#f58669, #ec6f5e);
+  box-shadow: 0 1px 2px #ac1000;
+}
+
+.button-a:active {
+  background-image: linear-gradient(#d74531, #e1613e);
+  box-shadow: inset 0 2px 2px #942718;
+}
+
+/* Стили страниц */
+
+@keyframes shake {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.field-error {
+  animation-name: shake;
+  animation-duration: 1s;
+}
+
+.zoomOut {
+  animation-name: zoomOut;
+  animation-duration: 1s;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;  /* чтобы все перекрывало */
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.overlay-show {
+  display: block;
+}
+
+.header-feedback {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 427px;
+  margin-top: -221px;
+  margin-left: -238px;
+  padding: 16px 25px 26px 25px;
+  border-radius: 10px;
+  background-color: #f8f7f4;
+  color: #343434;
+}
+
+.header-feedback-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 17px;
+  height: 17px;
+  border: none;
+  background: transparent url("../img/icon-cross-feedback.svg") no-repeat 0 0;
+  content: "";
+  cursor: pointer;
+  font-size: 0;
+}
+
+.header-feedback h2 {
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-weight: 500;
+}
+
+.field-name,
+.field-email {
+  /*width: 267px;*/
+  width: 235px; /* еще бордер 2px отнимал */
+  margin-bottom: 20px;
+}
+
+.feedback-btn {
+  float: right;
+  padding: 12px 26px;
+  border: none;
+  font-size: 17px;
+}
+
+.header-feedback textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 155px;
+  margin-bottom: 25px;
+}
+
+.logo {
+  display: block;
+  float: left;
+  margin-top: 10px;
+  margin-left: -6px;
+}
+
+.main-navigation {
+  float: left;
+  max-width: 420px;
+  margin: 0;
+  margin-top: 23px;
+  margin-left: 16px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+}
+
+.main-navigation > li {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-navigation > li > a {
+  display: block;
+  padding: 5px 15px 8px 15px;
+  border-radius: 16px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-navigation > li > a:hover {
+  background-color: #f7f6f3;
+  color: #343434;
+  text-decoration: none;
+}
+
+.main-navigation > li > a:active {
+  background-color: #ededed;
+  box-shadow: inset 0 2px 1px #696969;
+}
+
+.main-navigation > li:hover .sub-menu {
+  display: block;
+}
+
+.main-navigation .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: -5px;
+  display: none;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+  list-style-type: none;
+}
+
+/* добавляется небольшая полоска для того чтобы hover не терялся*/
+.main-navigation .sub-menu:after {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  content: "";
+}
+
+.main-navigation .sub-menu a {
+  display: block;
+  padding: 7px 20px;
+  color: #343434;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.main-navigation .sub-menu li:first-child a {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 5px 5px 0 0;
+  font-weight: bold;
+}
+
+.main-navigation .sub-menu li:nth-child(2) a {
+  padding-top: 10px;
+}
+
+.main-navigation .sub-menu li:last-child a {
+  padding-bottom: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.main-navigation .sub-menu li:first-child a:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 1px;
+  border-right: 5px solid #f8f7f4;
+  border-left: 5px solid #f8f7f4; /* рамка сливается с фоном */
+  background-color: #d1d0ce;
+  content: "";
+}
+
+.main-navigation .sub-menu a:hover {
+  background-color: #fbded7;
+}
+
+.main-navigation .sub-menu a:active {
+  background-color: #f6b5a5;
+}
+
+.main-navigation .current > a,
+.main-navigation .current > a:hover {
+  background-color: #d07058;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.search-block,
+.login-block,
+.basket-block {
+  position: relative;
+  z-index: 2; /* чтобы блок с телефонами перекрывать */
+  float: right;
+  margin-top: 23px;
+  margin-left: 10px;
+}
+
+/* добавляем невидимую планку между меню и выпадашками для устойчивого hover еффекта*/
+.login-block form:before,
+.search-block form:before,
+.basket-block .basket-hover:before {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  content: "";
+  /*background-color: yellow;*/
+}
+
+/* добавил от себя. Если тянуть мышкой к началу поля input то hover пропадал.
+В общем пропишите background и будет понятно что оно делает */
+.search-block form:after {
+  position: absolute;
+  top: -37px;
+  right: 32px;
+  width: 100%;
+  height: 37px;
+  content: "";
+  /*background-color: green;*/
+}
+
+.search-block .search {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2) url("../img/icon-loupe-white.svg") no-repeat 50% 50%;
+  font-size: 0;
+}
+
+.search-block:hover .search {
+  background: #f8f7f4 url("../img/icon-loupe-black.svg") no-repeat 50% 50%;
+}
+
+.search-block:hover form {
+  display: block;
+}
+
+.search-block form {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  box-sizing: border-box;
+  width: 272px;
+  margin-top: 5px;
+  padding: 20px 15px 15px 15px;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+}
+
+.field-input-menu {
+  width: 219px;
+  padding: 10px 10px 9px 10px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  color: #353535;
+  font-size: 14px;
+}
+
+.login-block .login {
+  display: block;
+  padding: 7px 16px 8px 44px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.2) url("../img/icon-enter-white.svg") no-repeat 16px 50%;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-block:hover .login {
+  background: #f8f7f4 url("../img/icon-enter-black.svg") no-repeat 16px 50%;
+  color: #323232;
+}
+
+.login-block:hover form {
+  display: block;
+}
+
+.login-block form {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  box-sizing: border-box;
+  width: 272px;
+  margin-top: 5px;
+  padding: 20px 15px 15px 15px;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+}
+
+.login-block .field-input-menu {
+  margin-bottom: 20px;
+}
+
+.login-block .class-login-password {
+  margin-bottom: 10px;
+}
+
+.login-block button[name="login-submit"] {
+  float: left;
+  margin-top: 5px;
+  padding: 9px 29px;
+  border: none;
+  font-size: 15px;
+}
+
+.login-block form a {
+  margin-left: 21px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.basket-block .basket {
+  display: block;
+  min-width: 60px;
+  padding: 7px 16px 8px 44px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.basket-block .empty {
+  background: rgba(255,255,255,0.2) url("../img/icon-basket-empty.svg") no-repeat 16px 50%;
+  color: #ffffff;
+}
+
+.basket-block .full {
+  background: #f8f7f4 url("../img/icon-basket-full.svg") no-repeat 16px 50%;
+  color: #313131;
+}
+
+.basket-block:hover .basket-hover {
+  display: block;
+}
+
+.basket-hover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  box-sizing: border-box;
+  width: 539px;
+  margin-top: 5px;
+  padding: 6px 17px 20px 17px;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+}
+
+.basket-items {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  color: #333333;
+  font-size: 13px;
+}
+
+.basket-item {
+  display: table-row;
+}
+
+.basket-item .cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.basket-item .cross a {
+  display: block;
+  width: 11px;
+  height: 11px;
+  background: transparent url("../img/icon-cross.svg") no-repeat 0 0;
+}
+
+.basket-item img {
+  display: block;
+  margin: 0 15px;
+  border-radius: 50%;
+}
+
+.basket-item .price,
+.basket-item .total {
+  white-space: nowrap;
+}
+
+.basket-item .price {
+  padding: 0 30px;
+}
+
+.basket-item span {
+  color: #7f7f7f;
+}
+
+.basket-items:after {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 1px;
+  background-color: #cacac7;
+  content: "";
+}
+
+.basket-hover > .total {
+  margin-bottom: 14px;
+  padding-right: 10px;
+  color: #333333;
+  text-align: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.basket-btn {
+  float: right;
+  padding: 8px 21px;
+  font-size: 15px;
+}
+
+.header-phones {
+  float: right;
+  margin-top: 16px;
+  color: #ffffff;
+  text-align: right;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header-phones span {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+input[name="toggle"] {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 527px;
+}
+
+.slider .controls {
+  position: absolute;
+  top: 443px;
+  left: 0;
+  z-index: 10;
+  width: 150px;
+}
+
+.slider label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.slider label:hover {
+  background-color: rgba(248,247,244,0.4);  /* #f8f7f4 и 40% */
+}
+
+#slide-1:checked ~ .wrapper label[for="slide-1"],
+#slide-2:checked ~ .wrapper label[for="slide-2"],
+#slide-3:checked ~ .wrapper label[for="slide-3"] {
+  background-color: #ffffff;
+}
+
+.wrapper {
+  transition: background-image 1s ease, background-color 1s ease;
+}
+
+/* делаем предзагрузку картинок слайдов */
+.wrapper:before,
+.wrapper:after {
+  visibility: hidden;
+  content: "";
+}
+
+/* интересный прием, хотя и весьма специфичный */
+.wrapper:before {
+  background-image: url("../img/background-slider-2.png");
+}
+
+.wrapper:after {
+  background-image: url("../img/background-slider-3.png");
+}
+
+#slide-1:checked ~ .wrapper {
+  background: #849d8f url("../img/background-slider-1.png") no-repeat 50% 0;
+}
+
+#slide-2:checked ~ .wrapper {
+  background: #8996a6 url("../img/background-slider-2.png") no-repeat 50% 0;
+}
+
+#slide-3:checked ~ .wrapper {
+  background: #9d8b84 url("../img/background-slider-3.png") no-repeat 50% 0;
+}
+
+.slide {
+  display: none;
+}
+
+#slide-1:checked ~ .wrapper .slide:nth-child(1),
+#slide-2:checked ~ .wrapper .slide:nth-child(2),
+#slide-3:checked ~ .wrapper .slide:nth-child(3) {
+  display: block;
+}
+
+.slide h1 {
+  position: absolute;
+  top: 230px;
+  left: 0;
+  color: #fcefd0;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.slide a {
+  position: absolute;
+  top: 420px;
+  left: 293px;
+  display: block;
+  padding: 12px 41px;
+  border-radius: 31px;
+  text-shadow: 0 2px 5px rgba(160,32,11,0.76);
+  font-size: 32px;
+}
+
+.banner {
+  width: 380px;
+  height: 196px;
+  margin-bottom: 40px;
+  padding: 13px 20px 20px 20px;
+  border-radius: 15px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.banner h2 {
+  margin: 0;
+  font-size: 35px;
+}
+
+.banner p {
+  margin: 14px 0;
+  font-size: 18px;
+}
+
+/* кнопки на разной высоте. Там недочет в макете, но я хочу pixelperfect*/
+.banner-btn-left {
+  float: right;
+  margin-top: 12px;
+}
+
+.banner-btn-right {
+  float: right;
+  margin-top: 6px;
+}
+
+.banner.left {
+  float: left;
+  background: #741426 url("../img/background-raspberries.jpg") repeat 0 0;
+}
+
+.banner.right {
+  float: right;
+  background: #43291d url("../img/background-chocolate.jpg") repeat 0 0;
+}
+
+.items {
+  font-size: 0;
+}
+
+/* ох чувствую зря я выбрал такое распространное название */
+.item {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 35px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.item-photo img {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.item-price {
+  position: absolute;
+  top: 136px;
+  left: 0;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.item-price span {
+  font-size: 30px;
+}
+
+.item .description {
+  font-size: 16px;   /* восстанавливаем после обнуления */
+  line-height: 1.5;
+}
+
+.item .item-btn {
+  position: absolute;
+  right: 0;
+  bottom: -53px;
+  left: 0;
+  z-index: 2;
+  display: none;
+  font-size: 15px;
+}
+
+.item:hover:before {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -74px;
+  left: -10px;
+  z-index: 1;
+  display: none;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.4);
+  content: "";
+  opacity: 0.3;
+}
+
+.item:hover:before {
+  display: block;
+}
+
+.item:hover .item-btn {
+  display: block;
+}
+
+.item:hover .item-photo,
+.item:hover .description {
+  position: relative;
+  z-index: 2;
+  border-bottom: none;  /* для item-photo не нужно, просто лень писать отдельное правило */
+}
+
+.item .hit:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background: transparent url("../img/icon-hit.svg") no-repeat 0 0;
+  content: "";
+}
+
+.advertising {
+  width: 820px;
+  height: 332px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #ede2ca url("../img/background-advertising.jpg") repeat 0 0;
+  color: #323232;
+  font-size: 0;
+}
+
+.advertising h2 {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.advertising p {
+  display: inline-block;
+  width: 345px;
+  margin: 0;
+  margin-top: 11px;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 55px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 1.375;
+}
+
+.advertising .icon-ice {
+  background: transparent url("../img/icon-ice.svg") no-repeat 0 0;
+}
+
+.advertising .icon-leaves {
+  background: transparent url("../img/icon-leaves.svg") no-repeat 0 0;
+}
+
+.advertising .icon-cow {
+  margin-left: 20px;
+  background: transparent url("../img/icon-cow.svg") no-repeat 0 0;
+}
+
+.advertising .icon-thermometer {
+  margin-left: 20px;
+  background: transparent url("../img/icon-thermometer.svg") no-repeat 0 0;
+}
+
+.news {
+  float: left;
+  width: 380px;
+  height: 170px;
+  margin-bottom: 40px;
+  padding: 25px 20px;
+  border-radius: 15px;
+  background: #eebac1 url("../img/background-fruit.jpg") no-repeat 0 0;
+}
+
+.news p {
+  margin-top: -2px;
+  margin-bottom: 6px;
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.news a {
+  background-color: rgba(255,255,255,0.8);
+  color: #353535;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.news span {
+  position: relative;
+  z-index: 2;
+  border-bottom: 2px solid #353535;
+}
+
+.delivery {
+  position: relative;
+  float: right;
+  width: 420px;
+  height: 220px;
+  border-radius: 15px;
+  background: white url("../img/mail-pattern.png") repeat 0 0;
+}
+
+.delivery:after {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 10px;
+  background-color: #f8f7f4;
+  content: "";
+}
+
+.delivery p {
+  position: relative;
+  z-index: 2;
+  margin: 33px 26px 15px 26px;
+  color: #5a5a5a;
+  font-size: 16px;
+  line-height: 1.375;
+}
+
+.delivery form {
+  position: relative;
+  z-index: 2;
+}
+
+.delivery .for-label {
+  display: inline-block;
+  margin-left: 26px;
+}
+
+.delivery input[name="delivery-email"] {
+  width: 197px;  /* блок for-label я сделал строчным, он тянется на 2px */
+}
+
+.delivery button[name="delivery-submit"] {
+  float: right;
+  margin-right: 25px;
+  border: none;
+  font-size: 17px;
+}
+
+/* ох я чувствую, что карту я вставил убого, но по другому не знаю как.*/
+.map {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  background: transparent url("../img/map.jpg") no-repeat 50% 0;
+}
+
+.map-google {
+  position: absolute;
+  width: 100%;
+  height: 430px;
+}
+
+.map-feedback {
+  position: relative;
+  right: 20px;
+  z-index: 2;
+  float: right;
+  width: 252px;
+  margin-top: 64px;
+  padding: 28px 25px;
+  border-radius: 15px;
+  background-color: #fefefe;  /* хотя тут надо rgba, т.к. заливка в макете 98 процентов от белого цвета */
+  color: #343434;
+}
+
+.map-feedback p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.map-feedback span {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.map-feedback p:nth-child(2) span {
+  line-height: 30px;
+}
+
+.map-feedback a {
+  display: block;
+  margin-top: 21px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.social {
+  float: left;
+  margin-top: -5px;
+  margin-left: -8px;
+  font-size: 0;
+}
+
+.social-btn {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 6px;
+  border: 3px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+.social-btn:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  content: "";
+  opacity: 0.8;
+}
+
+.social-btn-tw:after {
+  background: transparent url("../img/icon-tw.svg") no-repeat 0 0;
+}
+
+.social-btn-inst:after {
+  background: transparent url("../img/icon-inst.svg") no-repeat 0 0;
+}
+
+.social-btn-fb:after {
+  background: transparent url("../img/icon-fb.svg") no-repeat 0 0;
+}
+
+.social-btn-vk:after {
+  background: transparent url("../img/icon-vk.svg") no-repeat 0 0;
+}
+
+.social-btn:hover {
+  margin: 5px;
+  border: 4px solid rgba(255,255,255,0.7);
+}
+
+.social-btn:hover:after {
+  opacity: 1;
+}
+
+.social-btn:active:after {
+  border-radius: 50%;
+  box-shadow: inset 0 2px 1px #888888;
+  opacity: 0.7;
+}
+
+.navigation {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 16px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  width: 120px;  /* плохой способ, по другому не нашел как выровнять список */
+  padding-bottom: 6px;
+  padding-left: 22px;
+  vertical-align: top;
+}
+
+.navigation li:first-child {
+  background: transparent url("../img/icon-heart.svg") no-repeat 0 2px;
+  font-weight: bold;
+}
+.navigation li:first-child a {
+  font-weight: bold;
+}
+
+.navigation a {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.copyright {
+  float: right;
+  margin-top: -7px;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.copyright-a {
+  padding-top: 42px;
+  border-bottom: none;
+  background: transparent url("../img/logo-htmlacademy.svg") no-repeat 1px 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.copyright .copyright-a:hover {
+  border-bottom: 1px solid rgba(249,172,159,0.3);
+}
+
+.copyright-a span {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.copyright-a:hover span {
+  border-bottom: none;
+}
+
+.breadcrumbs {
+  margin-top: -25px;
+  margin-bottom: 2px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  position: relative;
+  margin-right: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.breadcrumbs a:after {
+  position: absolute;
+  top: 0;
+  right: -14px;
+  content: "\00bb";
+}
+
+.page-title {
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-size: 35px;
+}
+
+.sort-form {
+  margin-bottom: 25px;
+}
+
+.sort-form .sort,
+.sort-form .price,
+.sort-form .fat,
+.sort-form .filler {
+  float: left;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.sort-form .price {
+  margin-left: 15px;
+}
+
+.sort-form .fat {
+  float: right;
+}
+
+.sort-form p {
+  margin: 0;
+  margin-bottom: 7px;
+  padding-left: 17px;
+  font-size: 14px;
+}
+
+.sort-form input {
+  display: none;
+}
+
+.sort-form .div-field {
+  padding: 8px 16px 9px 16px;
+  border-radius: 18px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.sort-form .select {
+  padding: 7px 12px;
+}
+
+.sort-form select {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sort-form .select:hover {
+  background-color: #ffffff;
+  color: #343434;
+}
+
+.sort-form label {
+  position: relative;
+  margin-right: 16px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.sort-form label.cls-chk {
+  margin-right: 20px;
+}
+
+
+.sort-form label:last-child {
+  margin-right: 0;
+}
+
+.sort-form label:before {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  content: "";
+}
+
+.sort-form label:hover:before {
+  border: 2px solid #ffffff;
+}
+
+#fat1:disabled ~ label[for="fat1"],
+#fat2:disabled ~ label[for="fat2"],
+#fat3:disabled ~ label[for="fat3"],
+#fat4:disabled ~ label[for="fat4"],
+#filler1:disabled ~ label[for="filler1"],
+#filler2:disabled ~ label[for="filler2"],
+#filler3:disabled ~ label[for="filler3"],
+#filler4:disabled ~ label[for="filler4"],
+#filler5:disabled ~ label[for="filler5"] {
+  opacity: 0.4;
+}
+
+#fat1:disabled:hover ~ label[for="fat1"]:before,
+#fat2:disabled:hover ~ label[for="fat2"]:before,
+#fat3:disabled:hover ~ label[for="fat3"]:before,
+#fat4:disabled:hover ~ label[for="fat4"]:before,
+#filler1:disabled:hover ~ label[for="filler1"]:before,
+#filler2:disabled:hover ~ label[for="filler2"]:before,
+#filler3:disabled:hover ~ label[for="filler3"]:before,
+#filler4:disabled:hover ~ label[for="filler4"]:before,
+#filler5:disabled:hover ~ label[for="filler5"]:before {
+  border: 1px solid #ffffff;
+}
+
+#fat1:disabled:hover ~ label[for="fat1"],
+#fat2:disabled:hover ~ label[for="fat2"],
+#fat3:disabled:hover ~ label[for="fat3"],
+#fat4:disabled:hover ~ label[for="fat4"],
+#filler1:disabled:hover ~ label[for="filler1"],
+#filler2:disabled:hover ~ label[for="filler2"],
+#filler3:disabled:hover ~ label[for="filler3"],
+#filler4:disabled:hover ~ label[for="filler4"],
+#filler5:disabled:hover ~ label[for="filler5"] {
+  cursor: default;
+}
+
+.sort-form label.cls-radio:before {
+  border-radius: 50%;
+}
+
+.sort-form label.cls-chk:before {
+  border-radius: 4px;
+}
+
+.sort-form label.cls-radio:after {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  display: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  content: "";
+}
+
+.sort-form label.cls-chk:after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  display: none;
+  width: 9px;
+  height: 5px;
+  border-bottom: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  content: "";
+  transform: rotate(-45deg);
+}
+
+#fat1:checked ~ label[for="fat1"]:after,
+#fat2:checked ~ label[for="fat2"]:after,
+#fat3:checked ~ label[for="fat3"]:after,
+#fat4:checked ~ label[for="fat4"]:after {
+  display: block;
+}
+
+#filler1:checked ~ label[for="filler1"]:after,
+#filler2:checked ~ label[for="filler2"]:after,
+#filler3:checked ~ label[for="filler3"]:after,
+#filler4:checked ~ label[for="filler4"]:after,
+#filler5:checked ~ label[for="filler5"]:after {
+  display: block;
+}
+
+.sort-form .range {
+  position: relative;
+  width: 219px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.sort-form .scale {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  left: 15px;
+  height: 4px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.sort-form .bar {
+  width: 98px;
+  height: 4px;
+  margin-left: 29px;
+  background-color: #ffffff;
+}
+
+.sort-form .toggle {
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.sort-form .toggle:hover {
+  box-shadow: 0 0 0 1px #ffffff;
+}
+
+/* left = min 5px, max 194px*/
+.sort-form .min-toggle {
+  left: 34px;
+}
+
+.sort-form .max-toggle {
+  left: 132px;
+}
+
+.sort-form button[name="filter-submit"] {
+  float: right;
+  width: 144px;
+  height: 36px;
+  margin-top: 24px;
+  border: 2px solid #ffffff;
+  border-radius: 18px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.sort-form button[name="filter-submit"]:hover {
+  background-color: #ffffff;
+  color: #363636;
+}
+
+.sort-form button[name="filter-submit"]:active {
+  border: none;
+  background-color: #eaeaea;
+  box-shadow: inset 0 2px 1px #696969;
+}
+
+.paginator {
+  float: right;
+  margin-top: 63px;
+  margin-right: -9px;
+  margin-bottom: 30px;
+}
+
+.paginator a,
+.paginator span {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: top;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.paginator a:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.paginator .current,
+.paginator a:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.paginator .prev,
+.paginator .next {
+  position: relative;
+  font-size: 0;
+}
+
+/* оказывается, я люблю рисовать на CSS */
+.paginator .prev:before,
+.paginator .next:before {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  content: "";
+  transform: rotate(-135deg);
+}
+
+.paginator .next:before {
+  left: 6px;
+  transform: rotate(45deg);
+}
+/* пришлось уточнять, что именно ссылка, 
+а то оказывается у всех элементов есть состояние active! */
+.paginator a.prev:active:before,
+.paginator a.next:active:before {
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+}
+
+.paginator .disabled:before {
+  opacity: 0.2;
+}
+
+.catalog-main {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.for-label {
+  position: relative;
+}
+
+.for-label label {
+  position: absolute;
+  top: -16px;
+  left: 17px;
+  display: none;
+  color: #5b9ddf;
+  font-size: 11px;
+}
+
+.for-label input:focus ~ label,
+.for-label textarea:focus ~ label {
+  display: block;
+}
+
+/* у них padding у поля меньше, вот и лабел надо двигать */
+.login-block label,
+.search-block label {
+  left: 11px;
+}
